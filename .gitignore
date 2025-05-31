@@ -1,0 +1,83 @@
+## Build results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## VS Code settings
+.vscode/
+.history/
+
+## ASP.NET Core Secrets
+**/appsettings.Development.json
+secrets.json
+
+## Auto-generated files
+Generated\_*
+
+## .NET Core tooling
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuspec
+*.psmdcp
+*.vsix
+*.vshost.*
+*.ide
+
+## Logs
+*.log
+logs/
+log/
+
+## Publish output
+publish/
+wwwroot/
+
+## Rider IDE
+.idea/
+
+## Test results
+TestResults/
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+.trx
+*.accessor
+
+## Backup files
+*.bak
+*.old
+*.orig
+*.tmp
+
+## Others
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+*.sln.cache
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+## Mac system files
+Icon?
+ehthumbs.db
+Desktop.ini
