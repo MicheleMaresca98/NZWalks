@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "4ba140e3-13ba-4586-8ec6-ba9dbd67883a",
+		"name": "NZWalks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25311935"
+	},
+	"item": [
+		{
+			"name": "Get All Regions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5275/api/regions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"regions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Region",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"WLG\",\n    \"name\": \"Wellington Region\",\n    \"regionImageUrl\": \"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5275/api/regions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"regions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Region",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"WLG\",\n    \"name\": \"Wellington Region\",\n    \"regionImageUrl\": \"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5275/api/regions/08dda1d5-8e52-4440-8ad0-f2b99350f323",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"regions",
+						"08dda1d5-8e52-4440-8ad0-f2b99350f323"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Region By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5275/api/regions/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"regions",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "",
+							"description": "e5b43f8a-c2e0-4c3e-8974-7f789bcee9fb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Region",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5275/api/regions/08dda1d5-8e52-4440-8ad0-f2b99350f323",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"regions",
+						"08dda1d5-8e52-4440-8ad0-f2b99350f323"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
