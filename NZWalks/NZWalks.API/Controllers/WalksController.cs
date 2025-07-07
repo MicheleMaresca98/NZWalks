@@ -25,10 +25,13 @@ public class WalksController : ControllerBase
         [FromQuery] string? filterOn,
         [FromQuery] string? filterQuery,
         [FromQuery] string? sortBy,
-        [FromQuery] bool? isAscending
+        [FromQuery] bool? isAscending,
+        [FromQuery] int pageNumber = 1,
+        [FromQuery] int pageSize = 1000
     )
     {
-        var walksDomain = await walkRepository.GetAllAsync(filterOn, filterQuery, sortBy, isAscending ?? true);
+        var walksDomain = await walkRepository.GetAllAsync(
+            filterOn, filterQuery, sortBy, isAscending ?? true, pageNumber, pageSize);
         return Ok(mapper.Map<List<WalkDto>>(walksDomain));
     }
 
