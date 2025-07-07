@@ -7,132 +7,256 @@
 	},
 	"item": [
 		{
-			"name": "Get All Regions",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5275/api/regions",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5275",
-					"path": [
-						"api",
-						"regions"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Post Region",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"code\": \"WLG\",\n    \"name\": \"Wellington Region\",\n    \"regionImageUrl\": \"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Region",
+			"item": [
+				{
+					"name": "Get All Regions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5275/api/regions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"regions"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:5275/api/regions",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5275",
-					"path": [
-						"api",
-						"regions"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update Region",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"code\": \"WLG\",\n    \"name\": \"Wellington Region\",\n    \"regionImageUrl\": \"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Post Region",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"WLG\",\n    \"name\": \"Wellington Region\",\n    \"regionImageUrl\": \"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5275/api/regions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"regions"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:5275/api/regions/08dda1d5-8e52-4440-8ad0-f2b99350f323",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5275",
-					"path": [
-						"api",
-						"regions",
-						"08dda1d5-8e52-4440-8ad0-f2b99350f323"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Region By ID",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5275/api/regions/:id",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5275",
-					"path": [
-						"api",
-						"regions",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "",
-							"description": "e5b43f8a-c2e0-4c3e-8974-7f789bcee9fb"
+				{
+					"name": "Update Region",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"WLG\",\n    \"name\": \"Wellington Region\",\n    \"regionImageUrl\": \"https://images.pexels.com/photos/4350631/pexels-photo-4350631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5275/api/regions/08dda1d5-8e52-4440-8ad0-f2b99350f323",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"regions",
+								"08dda1d5-8e52-4440-8ad0-f2b99350f323"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "Get Region By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5275/api/regions/08dda1d5-8e52-4440-8ad0-f2b99350f323",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"regions",
+								"08dda1d5-8e52-4440-8ad0-f2b99350f323"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Region",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5275/api/regions/08dda1d5-8e52-4440-8ad0-f2b99350f323",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"regions",
+								"08dda1d5-8e52-4440-8ad0-f2b99350f323"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Delete Region",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5275/api/regions/08dda1d5-8e52-4440-8ad0-f2b99350f323",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5275",
-					"path": [
-						"api",
-						"regions",
-						"08dda1d5-8e52-4440-8ad0-f2b99350f323"
-					]
+			"name": "Walk",
+			"item": [
+				{
+					"name": "Get All Walks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5275/api/walks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"walks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Walk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mount Victoria Lookout Walk\",\n    \"description\": \"This is an easy 20 - 30 minutes walk to the lookout, which offers panoramic view of Wellington city, harbour and the sorroundings hills\",\n    \"lenghtInKm\": 5,\n    \"walkImageUrl\": null,\n    \"difficultyId\": \"0d2cb1db-b382-44ae-84c3-39709c98b1a2\",\n    \"regionId\": \"1a8c15d1-d98c-48cf-8288-cc539e6338e6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5275/api/walks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"walks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Walk",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mount Victoria Lookout Walk2\",\n    \"description\": \"This is an easy 20 - 30 minutes walk to the lookout, which offers panoramic view of Wellington city, harbour and the sorroundings hills\",\n    \"lenghtInKm\": 5,\n    \"walkImageUrl\": null,\n    \"difficultyId\": \"0d2cb1db-b382-44ae-84c3-39709c98b1a2\",\n    \"regionId\": \"1a8c15d1-d98c-48cf-8288-cc539e6338e6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5275/api/walks/08ddba3a-563f-43ff-808e-1663426dfc9d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"walks",
+								"08ddba3a-563f-43ff-808e-1663426dfc9d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Walk By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5275/api/walks/08ddba3a-563f-43ff-808e-1663426dfc9d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"walks",
+								"08ddba3a-563f-43ff-808e-1663426dfc9d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Walk",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5275/api/walks/08dda1d5-8e52-4440-8ad0-f2b99350f323",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5275",
+							"path": [
+								"api",
+								"walks",
+								"08dda1d5-8e52-4440-8ad0-f2b99350f323"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
