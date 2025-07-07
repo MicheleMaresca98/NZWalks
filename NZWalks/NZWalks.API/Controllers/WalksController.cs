@@ -29,9 +29,16 @@ public class WalksController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] AddWalkRequestDto addWalkRequestDto)
     {
-        var walkDomainModel = mapper.Map<Walk>(addWalkRequestDto);
-        walkDomainModel = await walkRepository.CreateAsync(walkDomainModel);
-        return CreatedAtAction(nameof(GetById), new { id = walkDomainModel.Id }, mapper.Map<WalkDto>(walkDomainModel));
+        if (ModelState.IsValid)
+        {
+            var walkDomainModel = mapper.Map<Walk>(addWalkRequestDto);
+            walkDomainModel = await walkRepository.CreateAsync(walkDomainModel);
+            return CreatedAtAction(nameof(GetById), new { id = walkDomainModel.Id }, mapper.Map<WalkDto>(walkDomainModel));
+        }
+        else
+        {
+            return BadRequest(ModelState);
+        }
     }
 
     [HttpGet]
@@ -50,13 +57,20 @@ public class WalksController : ControllerBase
     [Route("{id:Guid}")]
     public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateWalkRequestDto updateWalkRequestDto)
     {
-        var walkDomainModel = mapper.Map<Walk>(updateWalkRequestDto);
-        walkDomainModel = await walkRepository.UpdateAsync(id, walkDomainModel);
-        if (walkDomainModel == null)
+        if (ModelState.IsValid)
         {
-            return NotFound();
+            var walkDomainModel = mapper.Map<Walk>(updateWalkRequestDto);
+            walkDomainModel = await walkRepository.UpdateAsync(id, walkDomainModel);
+            if (walkDomainModel == null)
+            {
+                return NotFound();
+            }
+            return Ok(mapper.Map<WalkDto>(walkDomainModel));
         }
-        return Ok(mapper.Map<WalkDto>(walkDomainModel));
+        else
+        {
+            return BadRequest(ModelState);
+        }
     }
 
     [HttpDelete]
