@@ -13,7 +13,45 @@ builder.Services.AddControllers();
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "NZ Walks API",
+        Version = "v1"
+    });
+
+    options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n 
+                      Enter 'Bearer' [space] and then your token in the text input below.
+                      \r\n\r\nExample: 'Bearer 12345abcdef'",
+        Name = "Authorization",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Scheme = JwtBearerDefaults.AuthenticationScheme
+    });
+
+    options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement()
+      {
+        {
+          new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+          {
+            Reference = new Microsoft.OpenApi.Models.OpenApiReference
+              {
+                Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                Id = JwtBearerDefaults.AuthenticationScheme
+              },
+              Scheme = "Oauth2",
+              Name = JwtBearerDefaults.AuthenticationScheme,
+              In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+
+            },
+            new List<string>()
+          }
+        });
+}
+);
 
 builder.Services.AddDbContext<NZWalksDbContext>(options =>
     options.UseMySql(
