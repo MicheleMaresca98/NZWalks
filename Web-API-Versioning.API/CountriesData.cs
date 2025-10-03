@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using Web_API_Versioning.API.Models.Domain;
+
 namespace Web_API_Versioning.API
 {
     public static class CountriesData

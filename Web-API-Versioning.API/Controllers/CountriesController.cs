@@ -1,25 +1,31 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using Web_API_Versioning.API;
+using Web_API_Versioning.API.Models.Domain;
+using Web_API_Versioning.API.Models.DTOs;
 
-namespace Web_API_Versioning.API;
-
-[ApiController]
-[Route("api/[controller]")]
-public class CountriesController : ControllerBase
+namespace Web_API_Versioning.API.Controllers
 {
-    [HttpGet]
-    public IActionResult GetCountries()
+    [ApiController]
+    [Route("api/[controller]")]
+    public class CountriesController : ControllerBase
     {
-        var countriesDomainModel = CountriesData.Get();
-        var response = new List<CountryDto>();
-        foreach (var countryDomain in countriesDomainModel)
+        [HttpGet]
+        public IActionResult GetCountries()
         {
-            response.Add(new CountryDto
-            {
-                Id = countryDomain.Id,
-                Name = countryDomain.Name
-            });
-        }
+            var countriesDomainModel = CountriesData.Get();
+            var response = new List<CountryDto>();
 
-        return Ok(response);
+            foreach (var countryDomain in countriesDomainModel)
+            {
+                response.Add(new CountryDto
+                {
+                    Id = countryDomain.Id,
+                    Name = countryDomain.Name
+                });
+            }
+
+            return Ok(response);
+        }
     }
 }

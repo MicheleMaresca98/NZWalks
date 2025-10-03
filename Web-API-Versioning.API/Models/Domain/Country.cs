@@ -1,7 +1,8 @@
-namespace Web_API_Versioning.API;
-
-public class Country
+namespace Web_API_Versioning.API.Models.Domain
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
+    public class Country
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+    }
 }
