@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "52491da2-7099-4eb6-966d-aad060af0f7f",
+		"name": "Web-API-Versioning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25311935"
+	},
+	"item": [
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "Get all countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5049/api/countries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5049",
+							"path": [
+								"api",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
