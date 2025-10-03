@@ -124,6 +124,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<NZWalks.API.Middlewares.ExceptionHanlderMiddleware>();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
