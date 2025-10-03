@@ -10,24 +10,56 @@
 			"name": "Countries",
 			"item": [
 				{
-					"name": "Get all countries",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:5049/api/countries",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5049",
-							"path": [
-								"api",
-								"countries"
-							]
+					"name": "V1",
+					"item": [
+						{
+							"name": "Get all countries V1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5049/api/v1/countries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5049",
+									"path": [
+										"api",
+										"v1",
+										"countries"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
+				},
+				{
+					"name": "V2",
+					"item": [
+						{
+							"name": "Get all countries V2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5049/api/v2/countries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5049",
+									"path": [
+										"api",
+										"v2",
+										"countries"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
